@@ -1,0 +1,6 @@
+{
+  "name": "Navigator",
+  "description": "Ungeordnetes hinein – eine begründete, machbare nächste Handlung heraus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
