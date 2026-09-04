@@ -46,6 +46,12 @@ class ActionValidatorTest {
     assertEquals(listOf("title"), (result as ValidationResult.Invalid).fields)
   }
 
+  @Test fun pastDeadlineIsInvalid() {
+    val result = ActionValidator.validate(action(dueAt = now - 1), now)
+
+    assertEquals(listOf("dueAtEpochMs"), (result as ValidationResult.Invalid).fields)
+  }
+
   @Test fun boundaryValuesAreValid() {
     val result = ActionValidator.validate(
       action(
